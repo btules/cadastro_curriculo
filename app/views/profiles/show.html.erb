@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @profile %>
+
+<div>
+  <%= link_to "Editar Currículo", edit_profile_path(@profile) %> |
+  <%= link_to "Voltar para os Currículos", profiles_path %>
+
+  <%= button_to "Excluir o Currículo", @profile, method: :delete %>
+</div>
