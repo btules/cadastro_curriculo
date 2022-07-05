@@ -1,4 +1,4 @@
-<%= nested_form_for @profile do |form| %>
+<%= form_with model: @profile do |form| %>
   <% if profile.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
@@ -31,29 +31,20 @@
     <%= form.text_field :phone %>
   </div>
 
-  <%= form.fields_for :experiences do |experiences_form| %>
-    <div class="form-field">
+  <%= form.fields_for :experiences, index: profile.id do |experiences_form| %>
       <%= experiences_form.label "Nome da Empresa", style: "display: block" %>
       <%= experiences_form.text_field :name %>
-      <%= experiences_form.link_to_remove "Remove this task" %>
-    </div>
-    <div class="form-field">
+
       <%= experiences_form.label "Data de Inicio", style: "display: block" %>
       <%= experiences_form.text_field :date_start %>
-      <%= experiences_form.link_to_remove "Remove this task" %>
-    </div>
-    <div class="form-field">
+
       <%= experiences_form.label "Data Final", style: "display: block" %>
       <%= experiences_form.text_field :date_final %>
-      <%= experiences_form.link_to_remove "Remove this task" %>
-    </div>
-    <div class="form-field">
+
       <%= experiences_form.label "Descrição", style: "display: block" %>
       <%= experiences_form.text_field :description %>
-      <%= experiences_form.link_to_remove "Remove this task" %>
-    </div>
+
   <% end %>
-  <p><%= form.link_to_add "Adicionar Experiência", :experiences %></p>
 
   <div>
     <%= form.submit %>
