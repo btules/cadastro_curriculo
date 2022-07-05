@@ -1,0 +1,20 @@
+<h1>Cadastro de Curriculos</h1>
+<p>Encontre o Perfil ideial para o seu Negócio.</p>
+
+<%= form_with url: search_path, method: :get do %>
+  <%= label_tag :q, 'Busca:' %>
+  <%= text_field_tag :q %>
+  <%= submit_tag 'Pesquisar' %>
+<% end %>
+<br>
+<%= link_to "Novo Cadastro", new_profile_path %>
+<br>
+<ul>
+  <% @profiles.each do |profile| %>
+    <li><%= profile.name %><br>
+    <%= profile.email %><br>
+    <%= profile.phone %> <br>
+    <%= link_to "Ver profile", profile %></li>
+    <br>
+  <% end %>
+</ul>

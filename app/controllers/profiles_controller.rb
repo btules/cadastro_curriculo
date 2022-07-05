@@ -13,7 +13,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/new
   def new
     @profile = Profile.new
-    @profile.experiences.build
+    @experiences = @profile.experiences.build
   end
 
   # GET /profiles/1/edit
@@ -66,6 +66,6 @@ class ProfilesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def profile_params
-      params.require(:profile).permit(:name, :email, :url, :phone, experiences_attributes: [ :name, :date_start, :date_final, :description, :_destroy ])
+      params.require(:profile).permit(:name, :email, :url, :phone, experiences_attributes: [ :profile_id, :name, :date_start, :date_final, :description, :_destroy])
     end
 end
