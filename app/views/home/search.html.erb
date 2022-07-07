@@ -1,13 +1,13 @@
 <h1>Resultados da busca</h1>
 <ul>
   <% @profiles.each do |profile| %>
-    <li>
-      <%= profile.name %><br>
-      <%= profile.email %><br>
-      <%= profile.phone %> <br>
-      <%= link_to "Ver profile", profile %>
-      <br>
-    </li>
+      <li>
+        <%= profile.name %><br>
+        <%= profile.email %><br>
+        <%= profile.phone %> <br>
+        <%= link_to "Ver profile", profile %>
+        <br>
+      </li>
   <% end %>
 
   <%= link_to "Voltar para os Currículos", home_index_path %>

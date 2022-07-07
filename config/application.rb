@@ -10,7 +10,6 @@ module CadastroCurriculo
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -18,5 +17,14 @@ module CadastroCurriculo
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.action_dispatch.default_headers = {
+      'X-Frame-Options' => 'SAMEORIGIN',
+      'X-XSS-Protection' => '0',
+      'X-Content-Type-Options' => 'nosniff',
+      'X-Download-Options' => 'noopen',
+      'X-Permitted-Cross-Domain-Policies' => 'none',
+      'Referrer-Policy' => 'strict-origin-when-cross-origin'
+    }
   end
 end

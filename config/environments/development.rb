@@ -67,4 +67,13 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  Rails.application.config.action_dispatch.signed_cookie_digest = "SHA256"
+
+  Rails.application.config.action_dispatch.cookies_rotations.tap do |cookies|
+    cookies.rotate :signed, digest: "SHA1"
+  end
+
+
+  Time::DATE_FORMATS[:default] = "%d/%m/%Y %H:%M"
+  Date::DATE_FORMATS[:default] = "%d/%m/%Y"
 end

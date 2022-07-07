@@ -1,0 +1,23 @@
+
+[1m[35m== Brakeman Report ==
+[0m
+[32mApplication Path[0m: /home/btules/cadastro_curriculo
+[32mRails Version[0m: 7.0.3
+[32mBrakeman Version[0m: 5.2.3
+[32mScan Date[0m: 2022-07-05 21:15:10 -0300
+[32mDuration[0m: 3.7823022 seconds
+[32mChecks Run[0m: BasicAuth, BasicAuthTimingAttack, CSRFTokenForgeryCVE, ContentTag, CookieSerialization, CreateWith, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, DynamicFinders, EOLRails, EOLRuby, EscapeFunction, Evaluation, Execute, FileAccess, FileDisclosure, FilterSkipping, ForgerySetting, HeaderDoS, I18nXSS, JRubyXML, JSONEncoding, JSONEntityEscape, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, MimeTypeDoS, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, NestedAttributesBypass, NumberToCurrency, PageCachingCVE, PermitAttributes, QuoteTableName, Redirect, RegexDoS, Render, RenderDoS, RenderInline, ResponseSplitting, RouteDoS, SQL, SQLCVEs, SSLVerify, SafeBufferManipulation, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionManipulation, SessionSettings, SimpleFormat, SingleQuotes, SkipBeforeFilter, SprocketsPathTraversal, StripTags, SymbolDoSCVE, TemplateInjection, TranslateBug, UnsafeReflection, UnsafeReflectionMethods, ValidationRegex, VerbConfusion, WithoutProtection, XMLDoS, YAMLParsing
+
+[1m[35m== Overview ==
+[0m
+[32mControllers[0m: 4
+[32mModels[0m: 3
+[32mTemplates[0m: 17
+[32mErrors[0m: 0
+[32mSecurity Warnings[0m: 0
+
+[1m[35m== Warning Types ==
+[0m
+
+[1m[32mNo warnings found[0m
+

@@ -6,7 +6,7 @@
 
   <p>
     <strong>Email:</strong>
-    <%= profile.email %>
+    <%= profile.email%>
   </p>
 
   <p>
@@ -19,4 +19,25 @@
     <%= profile.phone %>
   </p>
 
+  <br>
+  <h4>Experiência</h4>
+  <br>
+  <% profile.experiences.each do |experience|%>
+    <p>
+      <strong>Nome da Empresa:</strong>
+      <%= experience.name %> 
+    </p>
+    <p>
+      <strong>Data de Inicio:</strong>
+      <%= post_date experience.date_start %>
+    </p>
+    <p>
+      <strong>Data de Saída:</strong>
+      <%= post_date experience.date_final %>
+    </p>
+    <p>
+      <strong>Descrição:</strong>
+      <%= experience.description %>
+    </p>
+  <%end%>
 </div>
